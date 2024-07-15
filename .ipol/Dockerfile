@@ -28,5 +28,5 @@ ENV PATH $bin:$PATH
 # $HOME is writable by the user `ipol`, but 
 ENV HOME /home/ipol
 # chmod 777 so that any user can use the HOME, in case the docker is run with -u 1001:1001
-RUN adduser -D ipol -d $HOME && chmod -R 777 $HOME
+RUN adduser -D ipol -h $HOME && chmod -R 777 $HOME
 USER ipol
